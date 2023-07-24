@@ -1,6 +1,21 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import Footer from "@/components/layout/Footer";
+import Nav from "@/components/layout/Nav";
+import "@/styles/main.scss";
+import type { AppProps } from "next/app";
+
+import { ChakraProvider, CSSReset } from "@chakra-ui/react";
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <ChakraProvider>
+        <CSSReset />
+        <div className="app-wrapper">
+          <Nav />
+          <Component {...pageProps} />
+          <Footer />
+        </div>
+      </ChakraProvider>
+    </>
+  );
 }

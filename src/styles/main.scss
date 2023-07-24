@@ -1,0 +1,30 @@
+//Variables
+$background-color: linear-gradient(134deg, #ea8d8d 0%, #a890fe 63.29%);
+
+// Fonts - imports
+@font-face {
+  font-family: "EBGaramond-Medium";
+  src: url("/public/Font/EBGaramond-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url("/public/Font/Poppins-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Global-styling
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+// to apply changes on body !
+.app-wrapper {
+  background: $background-color;
+}
